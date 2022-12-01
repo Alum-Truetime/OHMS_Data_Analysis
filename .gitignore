@@ -1,3 +1,8 @@
 OHMS_R_Studio/Data
 OHMS_Python/Data
 OHMS_Excel/Tbl_OpsCalculationsDB.xlsx
+.RData
+.Rhistory
+.spyproject
+.ipynb_checkpoints
+Data
