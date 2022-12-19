@@ -11,10 +11,7 @@ df = pd.read_csv('Data/CustomerQuotedProduct_clean.csv', encoding='Latin-1')
 
 df.head()
 
-Group = df['fldGroupTypeID']
-Quantity = df['fldQuantity']
-
-plt.bar(Group, Quantity, label='Group Count')
+plt.bar('fldGroupTypeID', 'fldQuantity', label='Group Count')
 plt.title('Number of Installers vs Install Hours')
 plt.ylabel('Number of Hours')
 plt.xlabel('Number of Installers')

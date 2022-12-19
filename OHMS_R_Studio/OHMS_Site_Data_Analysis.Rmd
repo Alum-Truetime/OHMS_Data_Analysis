@@ -8,7 +8,7 @@ This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
 
 ```{r}
-setwd("~/Library/Mobile Documents/com~apple~CloudDocs/Data Science/OHMS_Data-Analysis")
+setwd("~/Library/Mobile Documents/com~apple~CloudDocs/Data Science/OHMS_Data-Analysis/OHMS_R_Studio")
 ```
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
@@ -24,6 +24,6 @@ df_ProjInfo <- read.csv('Data/ProjectInformation.csv')
 df_SiteCond <- read.csv('Data/SiteConditions.csv')
 ```
 ```{r}
-summary(df_ConstSite)
+summary(df_SiteCond)
 ```
 
