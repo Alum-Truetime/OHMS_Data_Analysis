@@ -2,23 +2,28 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from datetime import datetime
+
 
 plt.style.use('fivethirtyeight')
 
 pd.set_option('display.max_columns', 89)
 
 # Global Variables
-StartDate = '2022-01-01'
-EndDate = '2023-01-01'
+StartDate = '2015-01-01'
+EndDate = '2022-01-01'
 
 # Initial DataFrame of Imported Clean Data
 df = pd.read_csv('Data/CustomerQuotedProduct_clean.csv', encoding='Latin-1')
-df.head()
+df.info()
 
 # Filtered DataFrame of Cleaned Data
 df2 = df.loc[(df['fldDate'] >= StartDate) & (df['fldDate'] < EndDate)]
 df2.head()
+
+# EDA Value counts to understand top specified Product lines.
+df2['fldGroupTypeID'].value_counts()
+df2['fldManufacturer_ID'].value_counts()
+df2['fldFurnitureSystemID'].value_counts()
 
 # (Line count) of Furniture Catagories Quoted
 plt.figure(figsize=(15, 5))
@@ -39,3 +44,8 @@ sns.histplot(y='fldManufacturer_ID', data=df2)
 plt.title(f'{StartDate} - {EndDate} Manufacturers Quoted')
 plt.ylabel('Manufacturers')
 plt.xlabel('count of Quoted lines')
+
+# Example of a Query statement.
+df.query('fldQuantity == 196')
+GroupID = df2.groupby('fldOpsWorksheetID')
+GroupID['fldQuantity'].sum()
