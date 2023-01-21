@@ -1,6 +1,5 @@
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 import seaborn as sns
 
 
@@ -39,7 +38,7 @@ plt.ylabel('Furniture System Catagories')
 plt.xlabel('count of entries')
 
 # (Line Count) of Manufacturer Entries.
-plt.figure(figsize=(10, 15))
+plt.figure(figsize=(10, 30))
 sns.histplot(y='fldManufacturer_ID', data=df2)
 plt.title(f'{StartDate} - {EndDate} Manufacturers Quoted')
 plt.ylabel('Manufacturers')
@@ -47,5 +46,5 @@ plt.xlabel('count of Quoted lines')
 
 # Example of a Query statement.
 df.query('fldQuantity == 196')
-GroupID = df2.groupby('fldOpsWorksheetID')
+GroupID = df2.groupby('fldManufacturer_ID')
 GroupID['fldQuantity'].sum()
