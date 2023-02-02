@@ -31,7 +31,7 @@ plt.title(f'{StartDate} - {EndDate} furniture Catagories Count')
 plt.xlabel('Furniture Catagories Quoted')
 
 # (Line Count) of Parts by Type that was Quoted.
-plt.figure(figsize=(10, 30))
+plt.figure(figsize=(15, 40))
 sns.histplot(y='fldOpsWorksheetID', data=df2)
 plt.title(f'{StartDate} - {EndDate} Groups Count')
 plt.ylabel('Furniture System Catagories')

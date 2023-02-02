@@ -24,6 +24,9 @@ df_ProjInfo <- read.csv('Data/ProjectInformation.csv')
 df_SiteCond <- read.csv('Data/SiteConditions.csv')
 ```
 ```{r}
+summary(df_DockAccess)
+summary(df_ProjInfo)
 summary(df_SiteCond)
-```
+summary(df_ConstSite)
+
 
